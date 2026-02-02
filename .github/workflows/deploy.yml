@@ -1,0 +1,27 @@
+name: Deploy to GitHub pages
+on:
+  push:
+    branches:
+      - main
+jobs:
+  publish-docs:
+    runs-on: ubuntu-latest
+    steps:
+      # https://github.com/actions/checkout
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+
+      - name: NPM install 📦
+        uses: bahmutov/npm-install@v1
+        
+      - name: Build docs 🏗
+        run: export NODE_OPTIONS=--openssl-legacy-provider && npm run docs:build
+        
+      - name: Deploy 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs/.vuepress/dist
+          cname: docs.alamiaconnect.com
