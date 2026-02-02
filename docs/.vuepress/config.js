@@ -5,7 +5,7 @@ module.exports = {
     title: 'AlamiaConnect User Documentation',
     description: 'Discover AlamiaConnect – your ultimate destination for innovative solutions tailored to elevate your business. Explore cutting-edge technology and expert strategies designed to drive growth and success. Unleash your potential with AlamiaConnect today',
     head: [
-        ['link', { rel: "icon", type: "image/png", href: "/favicon.ico" }],
+        ['link', { rel: "icon", type: "image/png", href: "/favicon.png" }],
 
         ['script', {}, `
             (function() {
@@ -19,19 +19,18 @@ module.exports = {
     themeConfig: {
         smoothScroll: true,
         lastUpdated: 'Last Updated',
-        repo: 'alamiaconnect/laravel-crm',
+        repo: 'AlamiaSoft/AlamiaConnect-UserGuide',
         repoLabel: 'Contribute to AlamiaConnect',
-        docsRepo: 'alamiaconnect/laravel-crm-docs',
+        docsRepo: 'AlamiaSoft/AlamiaConnect-UserGuide',
         docsDir: 'docs',
         docsBranch: 'master',
         editLinks: true,
         editLinkText: 'Help us improve this page on Github.',
         logo: '/logo.png',
         nav: [
-            { text: 'Dev Docs', link: 'https://devdocs.AlamiaConnectcrm.com/' },
-            { text: 'Community Forum', link: 'https://forums.AlamiaConnectcrm.com/' },
-            { text: 'Contact Us ', link: 'https://AlamiaConnectcrm.com/contacts/' }
-
+            { text: 'Dev Docs', link: 'https://devdocs.alamiaconnect.com/' },
+            { text: 'Community Forum', link: 'https://forums.alamiaconnect.com/' },
+            { text: 'Contact Us ', link: 'https://alamiaconnect.com/contacts/' }
         ],
         sidebar: {
             '/2.x/': require('./version-configs/2.x')
